@@ -32,6 +32,13 @@ namespace ExesAndOhsTest
         }
 
         [TestMethod]
+        public void zzooTest()
+        {
+            Assert.AreEqual(false, Kata.XO("zzoo"));
+        }
+
+
+        [TestMethod]
         public void OTest()
         {
             Assert.AreEqual(false, Kata.XO("O"));
