@@ -17,5 +17,11 @@ namespace FindTheOddIntTest
         {
             Assert.AreEqual(0, Kata.FindOndInt(new[] {1, 1, 2, 2, 3, 3}));
         }
+
+        [TestMethod]
+        public void MoreOddInterger()
+        {
+            Assert.AreEqual(0, Kata.FindOndInt(new[] {1, 1, 1, 2, 2, 2, 3, 3}));
+        }
     }
 }

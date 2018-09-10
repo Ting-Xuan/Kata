@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Odbc;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -20,8 +21,15 @@ namespace FindTheOddInt
                 })
                 .ToList();
 
-
-            return oCs.Where(x => x.Count % 2 == 1).Select(g => g.Num).FirstOrDefault();
+            int oCs_Count = oCs.Count(x => x.Count % 2 == 1);
+            if (oCs_Count > 1 || oCs_Count < 1)
+            {
+                return 0;
+            }
+            else
+            {
+                return oCs.Where(x => x.Count % 2 == 1).Select(g => g.Num).FirstOrDefault();
+            }
 
         }
 
